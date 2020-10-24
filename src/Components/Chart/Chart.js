@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { fetchDailyData } from '../Api/index'
+import { fetchDailyData } from '../Api'
 
 function Chart() {
 
@@ -9,6 +9,7 @@ function Chart() {
         const fetchAPI = async () => {
             const dailyData = await fetchDailyData();
             setDailyData(dailyData)
+            console.log(dailyData);
         }
 
         fetchAPI();
