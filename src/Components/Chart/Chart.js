@@ -12,12 +12,13 @@ function Chart() {
             setDailyData(await fetchDailyData())
         }
 
-        console.log(dailyData);
+        // console.log(dailyData);
+
         fetchAPI();
     }, [])
 
     const BarChart = (
-        dailyData[0] ? (
+        dailyData.length ? (
             <Bar
                 data={{
                     labels: dailyData.map(({ date }) => new Date(date).toLocaleDateString()),
