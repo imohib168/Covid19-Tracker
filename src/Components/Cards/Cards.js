@@ -14,7 +14,7 @@ import Paper from '@material-ui/core/Paper';
 
 function Cards({ data: { confirmed, recovered, deaths, lastUpdate } }) {
 
-    if (!confirmed && !recovered && !deaths && !lastUpdate) {
+    if (!confirmed) {
         return <div>Loading....</div>
     }
     // console.log(props);
@@ -25,15 +25,17 @@ function Cards({ data: { confirmed, recovered, deaths, lastUpdate } }) {
                 <Paper className={cx(styles.card, styles.infected)}>
                     <CardContent className={styles.CardContent}>
                         <Typography color="textSecondary" className={styles.head}>
-                            <h1>
+                            {/* <h1> */}
                                 Infected
-                            </h1>
+                            {/* </h1> */}
                         </Typography>
                         <Typography variant="h5" component="h2">
                             <CountUp start={0} end={confirmed.value} duration={1} separator="," />
                         </Typography>
                         <Typography color="textSecondary">
-                            <h3>{new Date(lastUpdate).toDateString()}</h3>
+                            {/* <h3> */}
+                                {new Date(lastUpdate).toDateString()}
+                            {/* </h3> */}
                         </Typography>
                         <Typography variant="body2" component="p" className={styles.p}>Number of Active Cases of Covid 19</Typography>
                     </CardContent>
@@ -44,9 +46,9 @@ function Cards({ data: { confirmed, recovered, deaths, lastUpdate } }) {
                 <Paper className={cx(styles.card, styles.recovered)}>
                     <CardContent>
                         <Typography color="textSecondary" gutterBottom className={styles.head}>
-                            <h1>
+                            {/* <h1> */}
                                 Recovered
-                            </h1>
+                            {/* </h1> */}
                         </Typography>
                         <Typography variant="h5" component="h2">
                             <CountUp start={0} end={recovered.value} duration={1} separator="," />
@@ -61,9 +63,9 @@ function Cards({ data: { confirmed, recovered, deaths, lastUpdate } }) {
                 <Paper className={cx(styles.card, styles.deaths)}>
                     <CardContent>
                         <Typography color="textSecondary" gutterBottom className={styles.head}>
-                            <h1>
+                            {/* <h1> */}
                                 Deaths
-                            </h1>
+                            {/* </h1> */}
                         </Typography>
                         <Typography variant="h5" component="h2">
                             <CountUp start={0} end={deaths.value} duration={1} separator="," />

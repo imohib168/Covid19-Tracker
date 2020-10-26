@@ -5,7 +5,8 @@
 
 body {
   background-color: #ffffff;
-  /* color: beige; */
+  display: flex;
+  flex-direction: column;
 }
 
 .container {

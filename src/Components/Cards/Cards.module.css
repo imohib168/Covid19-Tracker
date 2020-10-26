@@ -5,7 +5,7 @@
 }
 
 .card {
-    margin: 0 3% !important;
+    margin: 3% 3% !important;
 }
 
 .infected {
@@ -36,4 +36,14 @@
     margin-top: 20px !important;
     font-weight: bold !important;
     color: rgb(105, 69, 2) !important;
+}
+
+@media only screen and (max-width: 700px) {
+    .container {
+        display: flex !important;
+        flex-direction: column !important;
+    }.card {
+        width: 100%;
+    }
+
 }
