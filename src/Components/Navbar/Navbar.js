@@ -6,13 +6,13 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        flexGrow: 1,
+        flexGrow: 3,
     },
     menuButton: {
-        marginRight: theme.spacing(2),
+        marginRight: theme.spacing(3),
     },
     bgc: {
-        backgroundColor: '#7a0707'
+        backgroundColor: 'black'
     }
 }));
 

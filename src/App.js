@@ -1,7 +1,7 @@
 import React from 'react';
 import Styles from './App.module.css';
 
-import { Cards, Chart, CountryPicker, Navbar } from './Components'
+import { Cards, Chart, CountryPicker, Navbar, Footer } from './Components'
 
 import { fetchData } from './Components/Api'
 
@@ -63,6 +63,9 @@ class App extends React.Component {
           <Cards data={data} />
           <CountryPicker handleCountryChange={this.handleCountryChange}/>
           <Chart data={data} country={country} />
+        </div>
+        <div>
+          <Footer />
         </div>
       </div>
     )
